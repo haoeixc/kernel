@@ -166,7 +166,7 @@ jobs:
           compress_format: ${{ inputs.compress_format }}
 
       - name: Upload Kernel to Release
-        uses: haoeixc/release-action@main
+        uses: ncipollo/release-action@main
         if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
         with:
           tag: kernel_rk35xx
